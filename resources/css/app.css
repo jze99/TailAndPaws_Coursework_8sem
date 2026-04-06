@@ -1,0 +1,16 @@
+@import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn-orange {
+        @apply tw-bg-orange tw-text-light-gray tw-px-4 tw-py-2 tw-rounded-lg hover:tw-bg-dark-orange hover:tw-text-light-gray focus:tw-bg-dark-orange focus:tw-text-light-gray active:tw-bg-dark-orange active:tw-text-light-gray active:tw-scale-95 tw-transition-all;
+    }
+
+    .btn-dark-green {
+        @apply tw-bg-dark-green tw-text-light-gray tw-px-4 tw-py-2 tw-rounded-lg hover:tw-bg-dark-green-hover focus:tw-bg-dark-green-hover active:tw-bg-dark-green-hover active:tw-scale-95 tw-transition-all;
+    }
+}

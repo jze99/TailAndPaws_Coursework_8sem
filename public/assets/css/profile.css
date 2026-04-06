@@ -1,0 +1,76 @@
+/* Сайдбар */
+
+aside {
+    min-height: 100%;
+}
+
+.nav-link {
+    text-align: left;
+}
+
+/* Таблицы */
+
+td {
+    vertical-align: middle;
+}
+
+.form-check-input:checked {
+    background-color: var(--dark-green);
+    border-color: var(--dark-green);
+}
+
+.form-check-input:focus,
+.table .form-control:focus,
+.edit-brand .form-control:focus,
+.card-body .form-control:focus,
+.card-body .form-select:focus {
+    border-color: var(--dark-green) !important;
+    outline: 0 !important;
+    box-shadow: 0 0 0 .25rem #2a2a2254 !important;
+}
+
+#search:focus {
+    border-color: var(--dark-green) !important;
+    outline: 0 !important;
+    box-shadow: 0 0 0 .25rem #2a2a2254 !important;
+}
+
+/* Кнопки */
+
+.btn-dark-green:hover {
+    color: var(--light-gray);
+}
+
+.nav-item[role="presentation"] .nav-link.active {
+    background-color: var(--dark-green);
+    color: var(--light-gray);
+}
+
+.nav-item[role="presentation"] .nav-link {
+    transform: scale(1);
+}
+
+/* В ваш основной CSS файл */
+.category-name {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.category-name .text-muted {
+    font-family: monospace;
+    font-size: 12px;
+    color: #adb5bd !important;
+}
+
+@media (max-width: 991px) {
+
+    /* Сайдбар */
+
+    aside {
+        min-height: auto;
+    }
+}

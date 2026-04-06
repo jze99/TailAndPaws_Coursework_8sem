@@ -1,0 +1,59 @@
+main {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-check-input {
+    width: 15px !important;
+    height: 15px !important;
+    cursor: pointer;
+    margin: 0;
+}
+
+.login-form .form-control,
+input[type="submit"] {
+    border-radius: 5px;
+    height: 50px;
+    padding: 10px;
+}
+
+.login-form {
+    min-height: 45vh;
+}
+
+.form-check-input:checked {
+    background-color: var(--dark-green);
+    border-color: var(--dark-green);
+}
+
+.form-check-input:focus,
+.login-form .form-control:focus {
+    border-color: var(--dark-green);
+    outline: 0;
+    box-shadow: 0 0 0 .25rem #2a2a2254;
+}
+
+@media (max-width: 991px) {
+    .login-form {
+        width: 100% !important;
+        min-height: 30vh;
+    }
+
+    .login-form h3 {
+        font-size: 1.2rem !important;
+    }
+
+    .login-form .form-control {
+        height: 40px;
+        padding: 5px;
+    }
+
+    .form-check-input {
+        width: 18px !important;
+        height: 18px !important;
+    }
+}

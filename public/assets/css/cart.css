@@ -1,0 +1,92 @@
+.cart-item {
+    transition: background-color 0.2s ease;
+}
+
+.cart-item:hover {
+    background-color: #f8f9fa;
+}
+
+.quantity-control {
+    background: #fff;
+    overflow: hidden;
+}
+
+.quantity-control button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.quantity-control input {
+    text-align: center;
+    padding: 0;
+}
+
+.quantity-control input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.quantity-control input::-webkit-inner-spin-button,
+.quantity-control input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.remove-item {
+    opacity: 0.5;
+    transition: opacity 0.2s ease;
+}
+
+.remove-item:hover {
+    opacity: 1;
+}
+
+.btn-dark-green:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+.card {
+    border-radius: 12px;
+}
+
+.item-total {
+    font-size: 16px;
+}
+
+.btn-link {
+    font-size: 16pt;
+    text-decoration: none;
+    color: var(--dark-green);
+}
+
+.btn-link:hover {
+    color: var(--dark-green);
+}
+
+@media (max-width: 768px) {
+    .quantity-control {
+        width: 100px !important;
+    }
+
+    .quantity-control button {
+        width: 28px !important;
+    }
+
+    .quantity-control input {
+        width: 40px !important;
+    }
+
+    .item-total {
+        font-size: 14px;
+    }
+
+    .text-end {
+        width: 120px;
+        margin: 0 !important;
+    }
+}

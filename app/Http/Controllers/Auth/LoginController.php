@@ -1,0 +1,50 @@
+<?php
+
+namespace App\Http\Controllers\Auth;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
+
+class LoginController extends Controller
+{
+    public function showLoginForm()
+    {
+        return view('auth.login');
+    }
+
+    public function login(Request $request)
+    {
+        $credentials = $request->validate([
+            'email' => 'required|email',
+            'password' => 'required|string',
+        ], [
+            'email.required' => 'Введите email',
+            'email.email' => 'Введите корректный email',
+            'password.required' => 'Введите пароль',
+        ]);
+
+        $remember = $request->has('save_checkbox');
+
+        if (Auth::attempt($credentials, $remember)) {
+            $request->session()->regenerate();
+
+            return redirect()->intended('/');
+        }
+
+        return back()->withErrors([
+            'email' => 'Неверный email или пароль',
+        ])->onlyInput('email');
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect('/');
+    }
+}
